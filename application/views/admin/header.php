@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ela Admin - HTML5 Admin Template</title>
+    <title>Admin Page</title>
     <meta name="description" content="Ela Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -94,7 +94,7 @@
                         <a href="<?= base_url('admin') ?>/adminData" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user-secret"></i>Admin</a>
                     </li>
                     <li class="menu-item-has-children dropdown">
-                        <a href="<?= base_url('product/index/0') ?>" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cloud"></i>All Product</a>
+                        <a href="<?= base_url('product/index/0') ?>" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-suitcase"></i>All Product</a>
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cloud"></i>Category Product</a>
@@ -108,6 +108,9 @@
                             <li><i class="fa fa-code-fork"></i><a href="<?= base_url('product/index/7') ?>">Playground</a></li>
                             <li><i class="fa fa-star-o"></i><a href="<?= base_url('product/index/8') ?>">Events</a></li>
                         </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="<?= base_url('order/orderData') ?>" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-money"></i>Order Transaction</a>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->

@@ -34,7 +34,7 @@
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
-                <form id="signup" class="login100-form validate-form">
+                <form action="<?= base_url('auth/signup') ?>" method="post" id="signup" class="login100-form validate-form">
                     <span class="login100-form-title p-b-33">
                         Account Sign Up
                     </span>
@@ -53,6 +53,7 @@
 
                     <div class="wrap-input100 rs1 validate-input" data-validate="Password is required">
                         <input class="input100" type="password" name="password" placeholder="Password">
+                        <input type="hidden" value="1" name="role_id">
                         <span class="focus-input100-1"></span>
                         <span class="focus-input100-2"></span>
                     </div>
@@ -101,42 +102,6 @@
     <script src="<?= base_url('assets') ?>/login/js/main.js"></script>
     <!--===============================================================================================-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-    <script>
-        window.onload = () => {
-            const idForm = document.getElementById('signup');
-            const url = 'http://localhost:3000/user';
-
-            idForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-
-                const formData = new FormData(this);
-                const data = {
-                    name: formData.get('name'),
-                    email: formData.get('email'),
-                    password: formData.get('password'),
-                    role_id: 1
-                }
-
-                const options = {
-                    method: 'post',
-                    body: JSON.stringify(data),
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                }
-
-                fetch(url, options)
-                    .then(res => res.json())
-                    .then(res => console.log(res))
-
-                swal("Good job!", `Sing up success!`, "success")
-                    .then((value) => {
-                        document.location.reload();
-                    })
-            })
-        }
-    </script>
 
 </body>
 

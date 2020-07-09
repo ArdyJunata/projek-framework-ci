@@ -7,4 +7,9 @@ class Product_model extends CI_model
     {
         return $this->db->get_where("products", ['category_id' => $category_id])->result_array();
     }
+
+    public function getProductById($id)
+    {
+        return $this->db->get_where("products", ['id' => $id])->row_array();
+    }
 }

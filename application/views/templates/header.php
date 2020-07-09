@@ -58,7 +58,7 @@
         </div>
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
-                <li class="active"><a href="./index.html">Home</a></li>
+                <li class="active"><a href="<?= base_url('home') ?>">Home</a></li>
                 <li><a href="./shop-grid.html">Shop</a></li>
                 <li><a href="#">Pages</a>
                     <ul class="header__menu__dropdown">
@@ -133,7 +133,7 @@
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a href="./index.html">Home</a></li>
+                            <li class="active"><a href="<?= base_url('home') ?>">Home</a></li>
                             <li><a href="./shop-grid.html">Promo</a></li>
                             <li><a href="#">TICKET</a>
                                 <ul class="header__menu__dropdown">
@@ -151,10 +151,13 @@
                 <div class="col-lg-3">
                     <div class="header__cart">
                         <ul>
-                            <li><a href="#"><i class="fa fa-heart"></i> <span>0</span></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>0</span></a></li>
+                            <li><a href="#"><i class="fa fa-heart"></i> <span><?= $wishlist ?></span></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span><?= $cart ?></span></a></li>
                         </ul>
-                        <div class="header__cart__price">item: <span>Rp. 0</span></div>
+                        <div class="header__cart__price">item: <span>Rp. <?= number_format($total['total']) ?></span></div>
+                        <div class="header__cart__price">
+                            <a href="<?= base_url('order/checkout') ?>" class="btn btn-primary btn-sm">checkout</a>
+                        </div>
                     </div>
                 </div>
             </div>

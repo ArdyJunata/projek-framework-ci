@@ -12,4 +12,19 @@ class User_model extends CI_model
     {
         return $this->db->get_where("user", ['id' => $id])->row_array();
     }
+
+    public function insertUser($data)
+    {
+        return $this->db->insert("user", $data);
+    }
+
+    public function updateUser($data)
+    {
+        $this->db->set('name', $data['name']);
+        $this->db->set('address', $data['address']);
+        $this->db->set('city', $data['city']);
+        $this->db->set('province', $data['province']);
+        $this->db->where('id', $data['id']);
+        return $this->db->update("user");
+    }
 }

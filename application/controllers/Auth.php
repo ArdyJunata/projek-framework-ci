@@ -45,7 +45,24 @@ class Auth extends CI_Controller
 
     public function signup()
     {
-        $this->load->view('admin/signup');
+        if ($this->input->post()) {
+            $name = $this->input->post('name');
+            $email = $this->input->post('email');
+            $password = $this->input->post('password');
+            $data = [
+                'name' => $name,
+                'email' => $email,
+                'password' => password_hash($password, PASSWORD_DEFAULT),
+                'role_id' => 1
+            ];
+            if ($this->User_model->insertUser($data)) {
+                redirect('admin/login');
+            } else {
+                echo "gagal daftar";
+            }
+        } else {
+            $this->load->view('admin/signup');
+        }
     }
 
     public function logout()
