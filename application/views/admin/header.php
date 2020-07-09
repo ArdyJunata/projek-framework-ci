@@ -93,6 +93,22 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="<?= base_url('admin') ?>/adminData" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user-secret"></i>Admin</a>
                     </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="<?= base_url('product/index/0') ?>" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cloud"></i>All Product</a>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cloud"></i>Category Product</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-truck"></i><a href="<?= base_url('product/index/2') ?>">Tour</a></li>
+                            <li><i class="fa fa-rocket"></i><a href="<?= base_url('product/index/1') ?>">Attraction</a></li>
+                            <li><i class="fa fa-adn"></i><a href="<?= base_url('product/index/3') ?>">Beauty</a></li>
+                            <li><i class="fa fa-pagelines"></i><a href="<?= base_url('product/index/4') ?>">Food</a></li>
+                            <li><i class="fa fa-gamepad"></i><a href="<?= base_url('product/index/5') ?>">Games</a></li>
+                            <li><i class="fa fa-book"></i><a href="<?= base_url('product/index/6') ?>">Class & Workshop</a></li>
+                            <li><i class="fa fa-code-fork"></i><a href="<?= base_url('product/index/7') ?>">Playground</a></li>
+                            <li><i class="fa fa-star-o"></i><a href="<?= base_url('product/index/8') ?>">Events</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>

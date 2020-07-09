@@ -15,6 +15,11 @@
 <section class="categories">
     <div class="container">
         <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>Coming Soon Product</h2>
+                </div>
+            </div>
             <div class="categories__slider owl-carousel">
                 <div class="col-lg-3">
                     <div class="categories__item set-bg" data-setbg="<?= base_url('assets') ?>/img/categories/cat-1.jpg">
@@ -38,7 +43,7 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="categories__item set-bg" data-setbg="<?= base_url('assets') ?>/img/categories/cat-5.jpg">
-                        <h5><a href="#">Events</a></h5>
+                        <h5><a href="#">Cinema</a></h5>
                     </div>
                 </div>
             </div>
@@ -71,126 +76,158 @@
             </div>
         </div>
         <div class="row featured__filter">
-            <div class="col-lg-3 col-md-4 col-sm-6 mix atraction">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="<?= base_url('assets') ?>/img/featured/atraksi-1.jpg">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a href="#">Dolphin Sircus</a></h6>
-                        <h5>$30.00</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix atraction">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="<?= base_url('assets') ?>/img/featured/atraksi-2.jpg">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a href="#">Snow Bay</a></h6>
-                        <h5>$30.00</h5>
+            <?php
+            foreach ($attraction as $att) :
+            ?>
+                <div class="col-lg-3 col-md-4 col-sm-6 mix atraction">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="<?= base_url('assets') ?>/img/product/category/<?= $att['image'] ?>">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#"><?= $att['name'] ?></a></h6>
+                            <h5>IDR <?= number_format($att['price']) ?></h5>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix tours">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="<?= base_url('assets') ?>/img/featured/tour-1.jpg">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a href="#">Tidung Island</a></h6>
-                        <h5>$30.00</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix tours">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="<?= base_url('assets') ?>/img/featured/tour-2.jpg">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a href="#">Beach Kusuma Temple</a></h6>
-                        <h5>$30.00</h5>
+            <?php endforeach; ?>
+            <?php
+            foreach ($tour as $to) :
+            ?>
+                <div class="col-lg-3 col-md-4 col-sm-6 mix tours">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="<?= base_url('assets') ?>/img/product/category/<?= $to['image'] ?>">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#"><?= $to['name'] ?></a></h6>
+                            <h5>IDR <?= number_format($to['price']) ?></h5>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix beauty">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="<?= base_url('assets') ?>/img/featured/beu-1.jpg">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a href="#">Crab Pool Security</a></h6>
-                        <h5>$30.00</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix beauty">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="<?= base_url('assets') ?>/img/featured/beu-2.jpg">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a href="#">Crab Pool Security</a></h6>
-                        <h5>$30.00</h5>
+            <?php endforeach; ?>
+            <?php
+            foreach ($beauty as $beau) :
+            ?>
+                <div class="col-lg-3 col-md-4 col-sm-6 mix beauty">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="<?= base_url('assets') ?>/img/product/category/<?= $beau['image'] ?>">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#"><?= $beau['name'] ?></a></h6>
+                            <h5>IDR <?= number_format($beau['price']) ?></h5>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix games">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="<?= base_url('assets') ?>/img/featured/games-1.jpg">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a href="#">Rafting Bali Trip</a></h6>
-                        <h5>$30.00</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix games">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="<?= base_url('assets') ?>/img/featured/games-2.jpg">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a href="#">Next Level Outbond</a></h6>
-                        <h5>$30.00</h5>
+            <?php endforeach; ?>
+            <?php
+            foreach ($game as $gim) :
+            ?>
+                <div class="col-lg-3 col-md-4 col-sm-6 mix games">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="<?= base_url('assets') ?>/img/product/category/<?= $gim['image'] ?>">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#"><?= $gim['name'] ?></a></h6>
+                            <h5>IDR <?= number_format($gim['price']) ?></h5>
+                        </div>
                     </div>
                 </div>
-            </div>
+            <?php endforeach; ?>
+            <?php
+            foreach ($food as $foo) :
+            ?>
+                <div class="col-lg-3 col-md-4 col-sm-6 mix food">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="<?= base_url('assets') ?>/img/product/category/<?= $foo['image'] ?>">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#"><?= $foo['name'] ?></a></h6>
+                            <h5>IDR <?= number_format($foo['price']) ?></h5>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+            <?php
+            foreach ($class as $cls) :
+            ?>
+                <div class="col-lg-3 col-md-4 col-sm-6 mix class">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="<?= base_url('assets') ?>/img/product/category/<?= $cls['image'] ?>">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#"><?= $cls['name'] ?></a></h6>
+                            <h5>IDR <?= number_format($cls['price']) ?></h5>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+            <?php
+            foreach ($playground as $play) :
+            ?>
+                <div class="col-lg-3 col-md-4 col-sm-6 mix play">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="<?= base_url('assets') ?>/img/product/category/<?= $play['image'] ?>">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#"><?= $play['name'] ?></a></h6>
+                            <h5>IDR <?= number_format($play['price']) ?></h5>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+            <?php
+            foreach ($event as $ev) :
+            ?>
+                <div class="col-lg-3 col-md-4 col-sm-6 mix event">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="<?= base_url('assets') ?>/img/product/category/<?= $ev['image'] ?>">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#"><?= $ev['name'] ?></a></h6>
+                            <h5>IDR <?= number_format($ev['price']) ?></h5>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </section>
