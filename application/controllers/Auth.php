@@ -56,7 +56,7 @@ class Auth extends CI_Controller
                 'role_id' => 1
             ];
             if ($this->User_model->insertUser($data)) {
-                redirect('admin/login');
+                redirect('auth');
             } else {
                 echo "gagal daftar";
             }

@@ -58,4 +58,18 @@ class Home extends CI_Controller
 			echo "update gagal";
 		}
 	}
+
+	public function contact()
+	{
+		$id_user = $this->session->userdata('id_user');
+		$data = [
+			'user' => $this->User_model->getUserById($id_user),
+			'cart' => $this->Order_model->getCountCartByUser($id_user),
+			'wishlist' => $this->Order_model->getCountWishlistByUser($id_user),
+			'total' => $this->Order_model->getTotalHarga($id_user)
+		];
+		$this->load->view('templates/header', $data);
+		$this->load->view('home/contact', $data);
+		$this->load->view('templates/footer');
+	}
 }

@@ -1,3 +1,27 @@
+<div class="breadcrumbs">
+    <div class="breadcrumbs-inner">
+        <div class="row m-0">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Table</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Data</a></li>
+                            <li class="active">Data Product</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="content">
     <div class="animated fadeIn">
         <div class="row">
@@ -9,9 +33,10 @@
                     <div class="card-body">
                         <i id="alert">
                         </i>
-                        <!-- Modal Trigger -->
-                        <button data-toggle="modal" data-target="#mediumModal" class="btn btn-outline-primary userAdd"><i class="fa fa-plus-square"></i>&nbsp;Add <?= $name ?> </button>
-
+                        <?php if ($name != 'All') { ?>
+                            <!-- Modal Trigger -->
+                            <button data-toggle="modal" data-target="#mediumModal" class="btn btn-outline-primary userAdd"><i class="fa fa-plus-square"></i>&nbsp;Add <?= $name ?> </button>
+                        <?php } ?>
                         <!-- Modal -->
                         <div class="modal fade" id="mediumModal" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-lg" role="document">
@@ -99,6 +124,7 @@
         </div>
     </div><!-- .animated -->
 </div><!-- .content -->
+<div class="clearfix"></div>
 <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="<?= base_url('assets') ?>/admin/assets/js/requestProduct.js"></script>

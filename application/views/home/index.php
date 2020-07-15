@@ -1,16 +1,20 @@
-<div class="hero__item set-bg" data-setbg="<?= base_url('assets') ?>/img/hero/banner-1.jpg">
-    <div class="hero__text">
-        <span>PRAMBANAN TEMPLE</span>
-        <h2>Entrace <br />50% Discount</h2>
-        <p id="enjoy">Enjoy trip with your family</p>
-        <a href="#" class="primary-btn">SHOP NOW</a>
+<!-- Hero Section Begin -->
+<section class="hero">
+    <div class="container">
+        <div class="col-lg-12">
+            <div class="hero__item set-bg" data-setbg="<?= base_url('assets') ?>/img/hero/banner-1.jpg">
+                <div class="hero__text">
+                    <span>PRAMBANAN TEMPLE</span>
+                    <h2>Entrace <br />50% Discount</h2>
+                    <p id="enjoy">Enjoy trip with your family</p>
+                    <a href="#" class="primary-btn">SHOP NOW</a>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-</div>
-</div>
-</div>
 </section>
 <!-- Hero Section End -->
+
 <!-- Categories Section Begin -->
 <section class="categories">
     <div class="container">
@@ -83,8 +87,8 @@
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="<?= base_url('assets') ?>/img/product/category/<?= $att['image'] ?>">
                             <ul class="featured__item__pic__hover">
-                                <li><a href="<?= base_url('order/wishlist/') ?><?= $att['id'] ?>"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="<?= base_url('order/cart/') ?><?= $att['id'] ?>"><i class="fa fa-shopping-cart"></i></a></li>
+                                <li><a href="<?= base_url('order/wishlist?') ?>action=create&id=<?= $att['id'] ?>"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="<?= base_url('order/cartOptions?') ?>action=create&id=<?= $att['id'] ?>"><i class="fa fa-shopping-cart"></i></a></li>
                             </ul>
                         </div>
                         <div class="featured__item__text">
@@ -101,8 +105,8 @@
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="<?= base_url('assets') ?>/img/product/category/<?= $to['image'] ?>">
                             <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
+                                <li><a href="<?= base_url('order/wishlist?') ?>action=create&id=<?= $to['id'] ?>"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="<?= base_url('order/cartOptions?') ?>action=create&id=<?= $to['id'] ?>"><i class="fa fa-shopping-cart"></i></a></li>
                             </ul>
                         </div>
                         <div class="featured__item__text">
@@ -119,8 +123,8 @@
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="<?= base_url('assets') ?>/img/product/category/<?= $beau['image'] ?>">
                             <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
+                                <li><a href="<?= base_url('order/wishlist?') ?>action=create&id=<?= $beau['id'] ?>"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="<?= base_url('order/cartOptions?') ?>action=create&id=<?= $beau['id'] ?>"><i class="fa fa-shopping-cart"></i></a></li>
                             </ul>
                         </div>
                         <div class="featured__item__text">
@@ -137,8 +141,8 @@
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="<?= base_url('assets') ?>/img/product/category/<?= $gim['image'] ?>">
                             <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
+                                <li><a href="<?= base_url('order/wishlist?') ?>action=create&id=<?= $gim['id'] ?>"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="<?= base_url('order/cartOptions?') ?>action=create&id=<?= $gim['id'] ?>"><i class="fa fa-shopping-cart"></i></a></li>
                             </ul>
                         </div>
                         <div class="featured__item__text">
@@ -155,8 +159,8 @@
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="<?= base_url('assets') ?>/img/product/category/<?= $foo['image'] ?>">
                             <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
+                                <li><a href="<?= base_url('order/wishlist?') ?>action=create&id=<?= $foo['id'] ?>"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="<?= base_url('order/cartOptions?') ?>action=create&id=<?= $foo['id'] ?>"><i class="fa fa-shopping-cart"></i></a></li>
                             </ul>
                         </div>
                         <div class="featured__item__text">
@@ -191,8 +195,8 @@
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="<?= base_url('assets') ?>/img/product/category/<?= $play['image'] ?>">
                             <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="<?= base_url('order/cart/') + $play['id'] ?>"><i class="fa fa-shopping-cart"></i></a></li>
+                                <li><a href="<?= base_url('order/wishlist?') ?>action=create&id=<?= $play['id'] ?>"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="<?= base_url('order/cartOptions?') ?>action=create&id=<?= $play['id'] ?>"><i class="fa fa-shopping-cart"></i></a></li>
                             </ul>
                         </div>
                         <div class="featured__item__text">
@@ -209,8 +213,8 @@
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="<?= base_url('assets') ?>/img/product/category/<?= $ev['image'] ?>">
                             <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="<?= base_url('order/cart/') + $ev['id'] ?>"><i class="fa fa-shopping-cart"></i></a></li>
+                                <li><a href="<?= base_url('order/wishlist?') ?>action=create&id=<?= $ev['id'] ?>"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="<?= base_url('order/cartOptions?') ?>action=create&id=<?= $ev['id'] ?>"><i class="fa fa-shopping-cart"></i></a></li>
                             </ul>
                         </div>
                         <div class="featured__item__text">
@@ -253,6 +257,12 @@
             swal("Oops", "You Already Add this item to your wishlist", "error")
         } else if (<?= $this->session->userdata('alert') ?> == 2) {
             swal("Good job!", `Order Success, just wait for the products`, "success")
+        } else if (<?= $this->session->userdata('alert') ?> == 3) {
+            swal("Good job!", `Product added to your wishlist`, "success")
+        } else if (<?= $this->session->userdata('alert') ?> == 4) {
+            swal("Good job!", `Product added to your cart`, "success")
+        } else if (<?= $this->session->userdata('alert') ?> == 5) {
+            swal("Good job!", `Product you clicked got quantity +1 on your cart`, "success")
         }
         <?php $this->session->unset_userdata('alert'); ?>
     }

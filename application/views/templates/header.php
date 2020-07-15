@@ -97,7 +97,7 @@
                         <div class="header__top__left">
                             <ul>
                                 <li><i class="fa fa-user"></i>Welcome, <?= $user['name'] ?></li>
-                                <li>Free Shipping for all Order of $99</li>
+                                <li>Enjoy your shopping</li>
                             </ul>
                         </div>
                     </div>
@@ -134,25 +134,24 @@
                     <nav class="header__menu">
                         <ul>
                             <li class="active"><a href="<?= base_url('home') ?>">Home</a></li>
-                            <li><a href="./shop-grid.html">Promo</a></li>
-                            <li><a href="#">TICKET</a>
+                            <li><a href="#">Promo</a></li>
+                            <li><a href="#">Soon</a>
                                 <ul class="header__menu__dropdown">
-                                    <li><a href="./shop-details.html">Flights</a></li>
-                                    <li><a href="./shoping-cart.html">Trains</a></li>
-                                    <li><a href="./checkout.html">Hotel</a></li>
-                                    <li><a href="./blog-details.html">Car Rental</a></li>
+                                    <li><a href="">Flights</a></li>
+                                    <li><a href="">Trains</a></li>
+                                    <li><a href="">Hotel</a></li>
+                                    <li><a href="">Car Rental</a></li>
                                 </ul>
                             </li>
-                            <li><a href="./blog.html">Blog</a></li>
-                            <li><a href="./contact.html">Contact</a></li>
+                            <li><a href="<?= base_url() ?>home/contact">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
                 <div class="col-lg-3">
                     <div class="header__cart">
                         <ul>
-                            <li><a href="#"><i class="fa fa-heart"></i> <span><?= $wishlist ?></span></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span><?= $cart ?></span></a></li>
+                            <li><a href="<?= base_url('order/wishlist') ?>"><i class="fa fa-heart"></i> <span><?= $wishlist ?></span></a></li>
+                            <li><a href="<?= base_url('order/cartOptions') ?>"><i class="fa fa-shopping-bag"></i> <span><?= $cart ?></span></a></li>
                         </ul>
                         <div class="header__cart__price">item: <span>Rp. <?= number_format($total['total']) ?></span></div>
                         <div class="header__cart__price">
@@ -167,27 +166,3 @@
         </div>
     </header>
     <!-- Header Section End -->
-
-    <!-- Hero Section Begin -->
-    <section class="hero">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="hero__categories">
-                        <div class="hero__categories__all">
-                            <i class="fa fa-bars"></i>
-                            <span>All Events</span>
-                        </div>
-                        <ul>
-                            <li><a href="#">Attraction</a></li>
-                            <li><a href="#">Tours</a></li>
-                            <li><a href="#">Beauty And Wellness</a></li>
-                            <li><a href="#">Food</a></li>
-                            <li><a href="#">Games & Hobbies</a></li>
-                            <li><a href="#">Class & Workshop</a></li>
-                            <li><a href="#">Playground</a></li>
-                            <li><a href="#">Events</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-9">

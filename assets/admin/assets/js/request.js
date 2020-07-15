@@ -109,7 +109,6 @@ const update = () => {
 				$('#name').val(user.name);
 				$('#email').val(user.email);
 				$('#password').val(user.password);
-				$('#password').prop('disabled', true);
 				$('#image').prop('disabled', true);
 				$('#address').val(user.address);
 				$('#city').val(user.city);

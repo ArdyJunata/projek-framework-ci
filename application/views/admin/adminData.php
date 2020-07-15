@@ -150,6 +150,7 @@
         </div>
     </div><!-- .animated -->
 </div><!-- .content -->
+<div class="clearfix"></div>
 <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="<?= base_url('assets') ?>/admin/assets/js/request.js"></script>
